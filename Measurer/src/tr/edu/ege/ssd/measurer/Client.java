@@ -190,10 +190,13 @@ public class Client implements Runnable, CompleteListener, CommitListener {
 		switch (current) {
 		case BIG:
 			query = String.format(pattern, 1024, 768);
+			break;
 		case NORMAL:
 			query = String.format(pattern, 800, 600);
+			break;
 		case LIST:
 			query = String.format(pattern, 600, 600);
+			break;
 		case ICON:
 			query = String.format(pattern, 256, 256);
 		}
