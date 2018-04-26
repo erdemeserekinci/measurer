@@ -40,7 +40,7 @@ public class Client implements Runnable, CompleteListener, CommitListener {
 			System.out.println("Client created");
 		// init httpclient
 		prepareHTTPClient();
-	}	
+	}
 
 	@Override
 	public void onComplete(Result result) {
@@ -69,10 +69,10 @@ public class Client implements Runnable, CompleteListener, CommitListener {
 		try {
 			System.out.println("Preparing lists");
 			List<String> loadURIs = Paths.loadURIs();
-//			int from = (int) Paths.randomWithRange(0, 1000);
-//			List<String> subList = loadURIs.subList(from, from + 1000);
-//			System.out.println("Lists prepared");			
-//			visit(subList);
+			// int from = (int) Paths.randomWithRange(0, 1000);
+			// List<String> subList = loadURIs.subList(from, from + 1000);
+			// System.out.println("Lists prepared");
+			// visit(subList);
 			visit(loadURIs);
 			phaser.arriveAndAwaitAdvance();
 			metricManager.updateUI();
@@ -190,12 +190,16 @@ public class Client implements Runnable, CompleteListener, CommitListener {
 		switch (current) {
 		case BIG:
 			query = String.format(pattern, 1024, 768);
+			break;
 		case NORMAL:
 			query = String.format(pattern, 800, 600);
+			break;
 		case LIST:
 			query = String.format(pattern, 600, 600);
+			break;
 		case ICON:
 			query = String.format(pattern, 256, 256);
+			break;
 		}
 		if (isGray)
 			query = query + "&color=GRAY";
@@ -235,9 +239,9 @@ public class Client implements Runnable, CompleteListener, CommitListener {
 				e.printStackTrace();
 			}
 		}
-		if(log) {
-			String message = String.format("Stopped: Executor:%b and HTTPClient:%b",
-					this.executorService.isShutdown(), this.httpClient.isStopped());
+		if (log) {
+			String message = String.format("Stopped: Executor:%b and HTTPClient:%b", this.executorService.isShutdown(),
+					this.httpClient.isStopped());
 			System.out.println(message);
 		}
 	}

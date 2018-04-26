@@ -94,7 +94,7 @@ public class MetricMonitor extends ApplicationFrame {
 		final JPanel content = new JPanel(new BorderLayout());
 		content.add(linePanel, BorderLayout.NORTH);
 		content.add(gaugeChartPanel, BorderLayout.WEST);
-		content.add(jpnlPureMetrics,BorderLayout.SOUTH);
+		content.add(jpnlPureMetrics,BorderLayout.CENTER);
 		setContentPane(content);		
 	}
 

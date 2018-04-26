@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>Measurer</groupId>
   <artifactId>Measurer</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2</version>
   <name>Measurer</name>
   <description>Simple measuring tool to test SSD Course CDN project</description>
 	<build>
@@ -29,7 +29,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>tr.edu.ege.ssd.img.ClientLeader</mainClass>
+							<mainClass>tr.edu.ege.ssd.measurer.ClientLeader</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
@@ -52,17 +52,17 @@
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-server</artifactId>
-			<version>9.3.3.v20150827</version>
+			<version>9.4.9.v20180320</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-client</artifactId>
-			<version>9.3.3.v20150827</version>
+			<version>9.4.9.v20180320</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-servlet</artifactId>
-			<version>9.3.3.v20150827</version>
+			<version>9.4.9.v20180320</version>
 		</dependency>
 		<dependency>
 			<groupId>jfree</groupId>
